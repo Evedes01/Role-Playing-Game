@@ -60,7 +60,7 @@ ________________________________________________________
 Έτσι, πήγα στο πρόγραμμα, προσέθεσα τον Pimo στον φάκελο _Art>Sprites_ και τον έκανα drag-and-drop στον Sprite Renderer.
 
 
-![](Report_materials/charChange.PNG) ![](Report_materials/charChange2.PNG)
+![](Report_materials/charChange.PNG) ![](Report_materials/charChange2.png)
 
 # 2nd Deliverable
 
