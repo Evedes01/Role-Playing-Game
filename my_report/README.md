@@ -51,9 +51,16 @@
 
 και ξανά έτρεξα το παιχνίδι, διαπιστώνοντας ότι η κίνηση ήταν πολύ καλύτερη.
 
+________________________________________________________
+
+Πριν προχωρήσω στα Tilemaps, αποφάσισα να αντικαταστήσω την Ruby, με τον χαρακτήρα που σχεδίασα... τον Pimo.
+
+![](Report_materials/MCsketch.png)
+
+Έτσι, πήγα στο πρόγραμμα, προσέθεσα τον Pimo στον φάκελο _Art>Sprites_ και τον έκανα drag-and-drop στον Sprite Renderer.
 
 
-
+![](Report_materials/charChange.PNG) ![](Report_materials/charChange2.PNG)
 
 # 2nd Deliverable
 
