@@ -74,7 +74,7 @@ Tilemaps:
 ![](Report_materials/palette.png) ![](Report_materials/tiles.png)
 
 Συνεχίζοντας με το World Design, σχεδίασα το έδαφος υπολογίζοντας τα κουτιά του grid και εισήγαγα την εικόνα στο Unity, στον φάκελο Sprites που δημιούργησα. 
-Για αυτό το κομμάτι ακολούθησα ένα άλλο [video tutorial]( https://www.youtube.com/watch?v=DTp5zi8_u1U&ab_channel=Velvary), καθώς η πλατφόρμα έχει διαφοροποιηθεί σε σχέση με το αρχικό tutorial.
+Για αυτό το κομμάτι ακολούθησα ένα άλλο [video tutorial](https://www.youtube.com/watch?v=DTp5zi8_u1U&ab_channel=Velvary), καθώς η πλατφόρμα έχει διαφοροποιηθεί σε σχέση με το αρχικό tutorial.
 Μετά από αυτό, την επεξεργάστηκα θέτοντας το Sprite Mode στο Multiple 
 
 ![](Report_materials/mult.PNG)
@@ -91,7 +91,7 @@ Tilemaps:
 
 Αφού τελείωσα με αυτό, προσέθεσα στο σχέδιο, σε πρόγραμμα ζωγραφικής, διάφορες διακοσμητικές λεπτομέρειες και ανανέωσα την εικόνα ακολουθώντας την προηγούμενη διαδικασία, 
 
-![](Report_materials/slice1.png) ![](Report_materials/slice2.png) ![](Report_materials/slice3.png)
+![](Report_materials/slice1.png)![](Report_materials/slice2.png)![](Report_materials/slice3.png)
 
 ενώ προσέθεσα καινούρια παλέτα “Deco” συγκεκριμένα για τη διακόσμηση… Με αυτό τον τρόπο προσέθεσα καινούρια στοιχεία χωρίς να πειράξω τον από κάτω χάρτη.
 
