@@ -121,13 +121,104 @@ Tilemaps:
 # 2nd Deliverable
 Πριν προχωρίσω στην υλοποίηση αυτού του παραδοτέου, άλλαξα τα assets και το θέμα του παιχνιδιού από dungeon σε σπηλιά, καθώς θεώρησα ότι θα ταιριάζει καλύτερα η αισθητική με το consept του χαρακτήρα.
 
-![](Report_materials/d1/rigidbody.PNG)
+Αρχικά, για το physics system του Pimo προσέθεσα ένα Rigidbody 2D και έναν Box Collider 2D προσαρμόζοντας τις τιμές των δύο Components, όπως στο παράδειγμα, και αλλάζοντας το μέγεθος και τη θέση του Collider, ώστε να καλύπτει κυρίως το σώμα του χαρακτήρα.
 
-![](Report_materials/d1/rigidbodyfreezerot.PNG)
+![](Report_materials/d2/boxcoll.PNG)
+![](Report_materials/d2/rigidbodyfreezerot.PNG)
 
-![](Report_materials/d1/boxcoll.PNG)
+Για να φτιαχτεί το Jittering όταν ο χαρακτήρας έρχεται σε επαφή με κάποιο άλλο σώμα με Collider, προσάρμωσα τον κώδικα του χαρακτήρα αναλόγως:
 
-Ξεκινώντας το πρόγραμμα, και ακ
+![](Report_materials/d2/coderigid.PNG)
+(Και τέλος τον έκανα Prefab, βαζοντάς το στον φάκελο "Prefabs")
+
+Σε αυτό το στάδιο, προσέθεσα Tilemap Collisions προσθέτοντας τον ανάλογο Collider σε όλα τα επίπεδα του , ώστε Tilemap, ώστε ο χαρακτήρας να συγκρούεται και με το περιβάλλον.
+
+![](Report_materials/d2/tilecollider.PNG)
+
+Επίσης, προσάρμωσα τα Project Settings > Graphics, για να εμφανίζεται ο χαρακτήρας πίσω από το αντικείμενο που βρίσκεται πιο χαμηλά οπτικά από αυτόν.
+![](Report_materials/d2/customaxis.PNG)
+
+Όπως ένα Health Orb, 
+
+![](Report_materials/d2/healthcollider.PNG)
+
+το οποίο προσέθεσα στη σκηνή, του προσέθεσα τον collider και τον κώδικα, ώστε να δίνει μία ζωή στον παίχτη, όταν αυτος το "ακουμπάει" (ενεργοποιόντας το trigger function)
+![](Report_materials/d2/healthcode.PNG)
+
+και το έκανα Prefab, έχοντας έτσι αντίγραφα του αντικειμένου με όλες τις ρυθμίσεις και αλλαγές.
+
+Στη συνέχεια, προσέθεσα στο script Pimo helth stat σύμφωνα με τις οδηγίες, ώστε όταν η υγεία του χαρακτήρα δεν είναι full και αγγίζει ένα Health Orb να παίρνει μια έξτρα ζωή.
+
+
+Για το επόμενο βήμα αποφάσισα να ζωγραφίσω καρφιά για τα Damage Zones. Έτσι, προσέθεσα και αυτο το αρχείο στα assets.
+
+![](Report_materials/d2/spikes.png)
+
+Έβαλα τα καρφιά στη σκηνή καιο στη συνέχεια δημιούργησα ένα αρχείο κώδικα για τα Damage Zones, το οποίο συνέδεσα με τα καρφιά. Επίσης, έβαλα και δύο colliders: έναν box collider στο πάνω μέρος για την ρύθμιση του αν ο χαρακτήρας θα εμφανίζεται μπροστά ή πίσω από τα καρφιά όταν περνάει από πάνω τους, και έναν edge collider, για να καλύψω το κενό και ο χαρακτήρα να δέχεται damage από όλο το αντικείμενο... όπως φαίνεται παρακάτω. (Και τέλος το έκανα Prefab)
+
+![](Report_materials/d2/edgecollider.PNG)
+
+Ακολουθώντας το Tutorial, προσέθεσα και στον κώδικα του πρωταγωνιστή την ιδιότητα να παραμένει invincible για κάποιο χρονικό διάστημα, για να μην δέχεται συνέχεια ζημιά από το damage zone.
+
+![](Report_materials/d2/invincecode1.PNG) ![](Report_materials/d2/invincecode2.PNG) ![](Report_materials/d2/invincecode3.PNG)
+
+Κάπου εδώ έφτιαξα τους εχθρούς. 
+
+![](Report_materials/d2/newsprites.PNG)
+
+Στον οποίο, όπως φαίνεται και στην εικόνα, προσέθεσα Rigidbody 2D και Circle Collider 2D, και προσάρμωσα τον κώδικα, ώστε να κινείται στον οριζόντιο ή τον κατακόρυφο άξονα και όταν έρχεται σε επαφή με τον πρωταγωνιστή να του αφαιρεί μία ζωή.
+
+Πριν προχωρήσω στα aniamations, έκανα το Cinemachine, καθώς ήθελα να δοκιμάσω την πίστα και να δω πώς είναι η εμπειρία για τον παίχτη ως τώρα και αν όλα λειτουργούν σωστά.
+
+Για να το κάνω αυτό, εγκατέστησα το Cinemachine από τον Package Manager. Σε επόμεη φάση προσέθεσα στη σκηνή ένα Cinemachine GameObject, έκανα τις απαραίτητες ρυθμίσεις όπως στο παράδειγμα και έβαλα την κάμερα να ακολουθεί τον παίκτη.
+
+![](Report_materials/d2/cinemachine1.PNG) ![](Report_materials/d2/cinemachine2.PNG)
+
+Μετά έβαλα έναν εξωτερικό Collider στην κάμερα, γύρω από την πίστα, για να μην ξεπερνά τα όρια της και το προσέθεσα και αυτό στις ρυθμίσεις της κάμερας.
+
+![](Report_materials/d2/cinemachine3.PNG) ![](Report_materials/d2/cinemachine4.PNG)
+
+Τέλος, στο Edit > Project Settings > Physics 2D ξε-επέλεξα τα κουτάκια της στήλης Confiner (το layer στο οποίο βρίσκεται ο εξωτερικός Collider), ώστε να μην εφαρμόζεται σε κανένα άλλο αντικείμενο εκτός από την κάμερα.
+
+![](Report_materials/d2/cinemachine5conf.PNG)
+
+Στην τελική φάση, ασχολήθηκα με τα sprite animations και τα projectiles.
+
+Αφού έβαλα το sprite sheet του εχθρού στα assets το έκανα slice και κατέληξα με τα frames για το animation.
+
+Έπειτα, προσέθεσα ένα animator component στον εχθρό και έκανα τα animations του.
+
+![](Report_materials/d2/enemyrightani2.PNG)
+
+Και για όσα χρειαζόταν έβαλα renderer, που κάνει mirror τα frames στο άξονα X.
+
+![](Report_materials/d2/enemyrightani.PNG)
+
+Για τα animations όταν ο εχθρός πεθαίνει έβαλα και renderer που αλλάζει το χρώμα σε διάφανο.
+
+![](Report_materials/d2/enemydeathanim.PNG)
+
+Για τον animator και animations του πρωταγωνιστή:
+
+Εισήγαγα τον animator από τα assets από το project της Ruby, όπως στο tutorial...
+
+![](Report_materials/d2/importanimator.PNG) ![](Report_materials/d2/importanimator2.PNG)
+
+Άλλαξα τα ονόματα των αρχείων και τους τίτλους και προχώρησα στην εισαγωγή των animation για τον Pimo (όπως έφτιαξα και για τον εχθρό) στο lend tree του χαρακτήρα.
+
+![](Report_materials/d2/pimoanimator.PNG) ![](Report_materials/d2/pimoblendtree1.PNG) ![](Report_materials/d2/pimoblendtree2.PNG)
+
+Για το animation όταν ο Pimo τραυματίζεται χρησιμοποίησα και πάλι renderer, που αλλάζει το χρώμα σε κόκκινο που αναβοσβήνει.
+
+![](Report_materials/d2/animationhitcolor.PNG)
+
+Τελευταίο βήμα ήταν να φτιάξω τα projectiles.
+
+Εισήγαγα το σωστό art στα assets, το τοποθέτησα στη σκηνή, του έβαλα Rigidbody 2D component και Capsule Collider 2D, του εφάρμοσα και το ανάλογο script, όπως εξηγούσε το παράδειγμα και το έκανα Prefab.
+
+Παρ'όλο που ακολούθησα τις οδηγίες γαι τον τρόπο εκτόξευσης των projectiles, προσθέτοντας τις απαραίτητες εντολές στον κώδικα του πρωταγωνιστή και επιλέγοντας τα σωστά layers για τον χαρακτήρα και τα projectiles, στην παρούσα φάση δεν εκτοξεύονται, αλλά εμφανίζονται πάνω από το κεφάλι του. Παρ'όλα αυτά, καταστρέφουν τπυς εχθρούς κανονικά χωρίς κανένα πρόβλημα.
+
+Τέλος, έκανα το παιχνίδι Build and Run, το ανέβασα και παίζει όπως πρέπει εκτός από τα projectiles.
 
 # 3rd Deliverable 
 
