@@ -121,13 +121,33 @@ Tilemaps:
 # 2nd Deliverable
 Πριν προχωρίσω στην υλοποίηση αυτού του παραδοτέου, άλλαξα τα assets και το θέμα του παιχνιδιού από dungeon σε σπηλιά, καθώς θεώρησα ότι θα ταιριάζει καλύτερα η αισθητική με το consept του χαρακτήρα.
 
-![](Report_materials/d1/rigidbody.PNG)
+Αρχικά, για το physics system του Pimo προσέθεσα ένα Rigidbody 2D και έναν Box Collider 2D προσαρμόζοντας τις τιμές των δύο Components, όπως στο παράδειγμα, και αλλάζοντας το μέγεθος και τη θέση του Collider, ώστε να καλύπτει κυρίως το σώμα του χαρακτήρα.
 
-![](Report_materials/d1/rigidbodyfreezerot.PNG)
+![](Report_materials/d2/boxcoll.PNG)
+![](Report_materials/d2/rigidbodyfreezerot.PNG)
 
-![](Report_materials/d1/boxcoll.PNG)
+Για να φτιαχτεί το Jittering όταν ο χαρακτήρας έρχεται σε επαφή με κάποιο άλλο σώμα με Collider, προσάρμωσα τον κώδικα του χαρακτήρα αναλόγως:
 
-Ξεκινώντας το πρόγραμμα, και ακ
+![](Report_materials/d2/coderigid.PNG)
+
+Σε αυτό το στάδιο, προσέθεσα Tilemap Collisions προσθέτοντας τον ανάλογο Collider σε όλα τα επίπεδα του , ώστε Tilemap, ώστε ο χαρακτήρας να συγκρούεται και με το περιβάλλον.
+
+![](Report_materials/d2/tilecollider.PNG)
+
+Επίσης, προσάρμωσα τα Project Settings>Graphics, για να εμφανίζεται ο χαρακτήρας πίσω από το αντικείμενο που βρίσκεται πιο χαμηλά οπτικά από αυτόν.
+![](Report_materials/d2/customaxis.PNG)
+
+Όπως ένα Health Orb, 
+
+![](Report_materials/d2/healthcollider.PNG)
+
+το οποίο προσέθεσα στη σκηνή, του προσέθεσα τον collider και τον κώδικα, ώστε να δίνει μία ζωή στον παίχτη, όταν αυτος το "ακουμπάει"
+![](Report_materials/d2/healthcode.PNG)
+
+και το έκανα Prefab, έχοντας έτσι αντίγραφα του αντικειμένου με όλες τις ρυθμίσεις και αλλαγές.
+
+
+
 
 # 3rd Deliverable 
 
