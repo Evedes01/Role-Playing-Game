@@ -150,6 +150,7 @@ Tilemaps:
 
 
 Για το επόμενο βήμα αποφάσισα να ζωγραφίσω καρφιά για τα Damage Zones. Έτσι, προσέθεσα και αυτο το αρχείο στα assets.
+
 ![](Report_materials/d2/spikes.png)
 
 Έβαλα τα καρφιά στη σκηνή καιο στη συνέχεια δημιούργησα ένα αρχείο κώδικα για τα Damage Zones, το οποίο συνέδεσα με τα καρφιά. Επίσης, έβαλα και δύο colliders: έναν box collider στο πάνω μέρος για την ρύθμιση του αν ο χαρακτήρας θα εμφανίζεται μπροστά ή πίσω από τα καρφιά όταν περνάει από πάνω τους, και έναν edge collider, για να καλύψω το κενό και ο χαρακτήρα να δέχεται damage από όλο το αντικείμενο... όπως φαίνεται παρακάτω.
@@ -182,8 +183,33 @@ Tilemaps:
 
 Στην τελική φάση, ασχολήθηκα με τα sprite animations και τα projectiles.
 
+Αφού έβαλα το sprite sheet του εχθρού στα assets το έκανα slice και κατέληξα με τα frames για το animation.
 
-![](Report_materials/d2/edgecollider.PNG)
+Έπειτα, προσέθεσα ένα animator component στον εχθρό και έκανα τα animations του.
+
+![](Report_materials/d2/enemyrightani2.PNG)
+
+Και για όσα χρειαζόταν έβαλα renderer, που κάνει mirror τα frames στο άξονα X.
+
+![](Report_materials/d2/enemyrightani.PNG)
+
+Για τα animations όταν ο εχθρός πεθαίνει έβαλα και renderer που αλλάζει το χρώμα σε διάφανο.
+
+![](Report_materials/d2/enemydeathanim.PNG)
+
+Για τον animator και animations του πρωταγωνιστή:
+
+Εισήγαγα τον animator από τα assets από το project της Ruby, όπως στο tutorial...
+
+![](Report_materials/d2/importanimator.PNG) ![](Report_materials/d2/importanimator2.PNG)
+
+Άλλαξα τα ονόματα των αρχείων και τους τίτλους και προχώρησα στην εισαγωγή των animation για τον Pimo (όπως έφτιαξα και για τον εχθρό) στο lend tree του χαρακτήρα.
+
+![](Report_materials/d2/pimoanimator.PNG) ![](Report_materials/d2/pimoblendtree1.PNG) ![](Report_materials/d2/pimoblendtree2.PNG)
+
+Για το animation όταν ο Pimo τραυματίζεται χρησιμοποίησα και πάλι renderer, που αλλάζει το χρώμα σε κόκκινο που αναβοσβήνει.
+
+![](Report_materials/d2/animationhitcolor.PNG)
 
 # 3rd Deliverable 
 
