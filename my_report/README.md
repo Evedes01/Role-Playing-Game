@@ -164,10 +164,23 @@ Tilemaps:
 
 ![](Report_materials/d2/newsprites.PNG)
 
+Στον οποίο, όπως φαίνεται και στην εικόνα, προσέθεσα Rigidbody 2D και Circle Collider 2D, και προσάρμωσα τον κώδικα, ώστε να κινείται στον οριζόντιο ή τον κατακόρυφο άξονα και όταν έρχεται σε επαφή με τον πρωταγωνιστή να του αφαιρεί μία ζωή.
 
-Πριν προχωρήσω στα aniamations έκανα το Cinemachine, καθώς ήθελα να δοκιμάσω την πίστα και να δω πώς είναι η εμπειρία για τον παίχτη ως τώρα και αν όλα λειτουργούν σωστά.
+Πριν προχωρήσω στα aniamations, έκανα το Cinemachine, καθώς ήθελα να δοκιμάσω την πίστα και να δω πώς είναι η εμπειρία για τον παίχτη ως τώρα και αν όλα λειτουργούν σωστά.
 
-![](Report_materials/d2/edgecollider.PNG)
+Για να το κάνω αυτό, εγκατέστησα το Cinemachine από τον Package Manager. Σε επόμεη φάση προσέθεσα στη σκηνή ένα Cinemachine GameObject, έκανα τις απαραίτητες ρυθμίσεις όπως στο παράδειγμα και έβαλα την κάμερα να ακολουθεί τον παίκτη.
+
+![](Report_materials/d2/cinemachine1.PNG) ![](Report_materials/d2/cinemachine2.PNG)
+
+Μετά έβαλα έναν εξωτερικό Collider στην κάμερα, γύρω από την πίστα, για να μην ξεπερνά τα όρια της και το προσέθεσα και αυτό στις ρυθμίσεις της κάμερας.
+
+![](Report_materials/d2/cinemachine3.PNG) ![](Report_materials/d2/cinemachine4.PNG)
+
+Τέλος, στο Edit>Project Settings>Physics 2D ξε-επέλεξα τα κουτάκια της στήλης Confiner (το layer στο οποίο βρίσκεται ο εξωτερικός Collider), ώστε να μην εφαρμόζεται σε κανένα άλλο αντικείμενο εκτός από την κάμερα.
+
+![](Report_materials/d2/cinemachine5conf.PNG)
+
+Στην τελική φάση, ασχολήθηκα με τα sprite animations και τα projectiles.
 
 
 ![](Report_materials/d2/edgecollider.PNG)
