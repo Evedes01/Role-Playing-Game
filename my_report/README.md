@@ -149,9 +149,28 @@ Tilemaps:
 Στη συνέχεια, προσέθεσα στο script Pimo helth stat σύμφωνα με τις οδηγίες, ώστε όταν η υγεία του χαρακτήρα δεν είναι full και αγγίζει ένα Health Orb να παίρνει μια έξτρα ζωή.
 
 
+Για το επόμενο βήμα αποφάσισα να ζωγραφίσω καρφιά για τα Damage Zones. Έτσι, προσέθεσα και αυτο το αρχείο στα assets.
+![](Report_materials/d2/spikes.png)
 
-![](Report_materials/d2/.PNG)
+Έβαλα τα καρφιά στη σκηνή καιο στη συνέχεια δημιούργησα ένα αρχείο κώδικα για τα Damage Zones, το οποίο συνέδεσα με τα καρφιά. Επίσης, έβαλα και δύο colliders: έναν box collider στο πάνω μέρος για την ρύθμιση του αν ο χαρακτήρας θα εμφανίζεται μπροστά ή πίσω από τα καρφιά όταν περνάει από πάνω τους, και έναν edge collider, για να καλύψω το κενό και ο χαρακτήρα να δέχεται damage από όλο το αντικείμενο... όπως φαίνεται παρακάτω.
 
+![](Report_materials/d2/edgecollider.PNG)
+
+Ακολουθώντας το Tutorial, προσέθεσα και στον κώδικα του πρωταγωνιστή την ιδιότητα να παραμένει invincible για κάποιο χρονικό διάστημα, για να μην δέχεται συνέχεια ζημιά από το damage zone.
+
+![](Report_materials/d2/invincecode1.PNG) ![](Report_materials/d2/invincecode2.PNG) ![](Report_materials/d2/invincecode3.PNG)
+
+Κάπου εδώ έφτιαξα τους εχθρούς. 
+
+![](Report_materials/d2/newsprites.PNG)
+
+
+Πριν προχωρήσω στα aniamations έκανα το Cinemachine, καθώς ήθελα να δοκιμάσω την πίστα και να δω πώς είναι η εμπειρία για τον παίχτη ως τώρα και αν όλα λειτουργούν σωστά.
+
+![](Report_materials/d2/edgecollider.PNG)
+
+
+![](Report_materials/d2/edgecollider.PNG)
 
 # 3rd Deliverable 
 
