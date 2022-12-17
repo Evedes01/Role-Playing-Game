@@ -119,7 +119,15 @@ Tilemaps:
 
 
 # 2nd Deliverable
+Πριν προχωρίσω στην υλοποίηση αυτού του παραδοτέου, άλλαξα τα assets και το θέμα του παιχνιδιού από dungeon σε σπηλιά, καθώς θεώρησα ότι θα ταιριάζει καλύτερα η αισθητική με το consept του χαρακτήρα.
 
+![](Report_materials/d1/rigidbody.PNG)
+
+![](Report_materials/d1/rigidbodyfreezerot.PNG)
+
+![](Report_materials/d1/boxcoll.PNG)
+
+Ξεκινώντας το πρόγραμμα, και ακ
 
 # 3rd Deliverable 
 
